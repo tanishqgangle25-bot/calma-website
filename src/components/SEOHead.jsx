@@ -38,6 +38,8 @@ export default function SEOHead({
       <meta property="og:image" content={ogImage} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
+      <meta property="og:image:type" content="image/jpeg" />
+      <meta property="og:image:alt" content="calma — AI review management for restaurants in India" />
       <meta property="og:locale" content="en_IN" />
 
       {/* Twitter Card */}

@@ -46,8 +46,8 @@ export default function Hero() {
             <br />
             automated.
           </h1>
-          <p className="mt-6 text-base md:text-xl text-muted max-w-md leading-relaxed mx-auto md:mx-0">
-            calma manages your Google reviews 24/7 — so you don't have to.
+          <p className="speakable mt-6 text-base md:text-xl text-muted max-w-md leading-relaxed mx-auto md:mx-0">
+            calma is an AI tool that automatically replies to your Google, Zomato, and Swiggy reviews 24/7. Restaurants across India use calma to improve ratings and save hours every week.
           </p>
           <div className="inline-block mt-8 relative">
             <Link to="/pricing">

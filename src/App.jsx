@@ -10,6 +10,7 @@ import Testimonials from './pages/Testimonials.jsx'
 import Contact from './pages/Contact.jsx'
 import Ecosystem from './pages/Ecosystem.jsx'
 import FAQ from './pages/FAQ.jsx'
+import About from './pages/About.jsx'
 
 export default function App() {
   return (
@@ -25,6 +26,7 @@ export default function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/ecosystem" element={<Ecosystem />} />
         <Route path="/faq" element={<FAQ />} />
+        <Route path="/about" element={<About />} />
       </Routes>
       <Footer />
     </main>

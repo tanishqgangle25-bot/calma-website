@@ -246,6 +246,68 @@ export const featureFaqSchema = {
   ],
 }
 
+export const speakableSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://heycalma.in/#webpage',
+  speakable: {
+    '@type': 'SpeakableSpecification',
+    cssSelector: ['h1', '.speakable'],
+  },
+  url: 'https://heycalma.in',
+}
+
+export const aboutPageSchema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'AboutPage',
+      '@id': 'https://heycalma.in/about#webpage',
+      url: 'https://heycalma.in/about',
+      name: 'About calma — AI Review Management for Indian Restaurants',
+      description: 'calma is built by thenightera, a brand intelligence company based in Indore, Madhya Pradesh. Founded by Tanishq Gangle to help Indian restaurants improve their reputation through AI automation.',
+      publisher: { '@id': 'https://heycalma.in/#organization' },
+    },
+    {
+      '@type': 'Person',
+      '@id': 'https://heycalma.in/#founder',
+      name: 'Tanishq Gangle',
+      jobTitle: 'Founder',
+      worksFor: { '@id': 'https://heycalma.in/#organization' },
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Indore',
+        addressRegion: 'Madhya Pradesh',
+        addressCountry: 'IN',
+      },
+      sameAs: ['https://www.instagram.com/thenightera'],
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      '@id': 'https://heycalma.in/#organization',
+      name: 'calma',
+      url: 'https://heycalma.in',
+      logo: 'https://heycalma.in/images/cute-1.png',
+      email: 'officialnightera@gmail.com',
+      foundingDate: '2024',
+      founder: { '@id': 'https://heycalma.in/#founder' },
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Indore',
+        addressRegion: 'Madhya Pradesh',
+        postalCode: '452001',
+        addressCountry: 'IN',
+      },
+      sameAs: [
+        'https://www.instagram.com/heycalma',
+        'https://www.instagram.com/thenightera',
+        'https://www.thenightera.in',
+      ],
+    },
+  ],
+}
+
 export const homePageSchema = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -254,5 +316,6 @@ export const homePageSchema = {
     softwareSchema,
     localBusinessSchema,
     faqSchema,
+    speakableSchema,
   ],
 }

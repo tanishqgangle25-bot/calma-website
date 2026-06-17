@@ -35,6 +35,22 @@
   </url>
 
   <url>
+    <loc>https://heycalma.in/about</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://heycalma.in/about"/>
+  </url>
+
+  <url>
+    <loc>https://heycalma.in/faq</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://heycalma.in/faq"/>
+  </url>
+
+  <url>
     <loc>https://heycalma.in/testimonials</loc>
     <lastmod>2026-06-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -56,14 +72,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://heycalma.in/contact"/>
-  </url>
-
-  <url>
-    <loc>https://heycalma.in/faq</loc>
-    <lastmod>2026-06-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en-IN" href="https://heycalma.in/faq"/>
   </url>
 
 </urlset>

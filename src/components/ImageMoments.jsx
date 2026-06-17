@@ -51,7 +51,7 @@ export default function ImageMoments() {
             className="relative rounded-3xl overflow-hidden bg-[#1d1d1f]"
             style={{ minHeight: 580 }}
           >
-            <img src={imgSrc('restaurant')} onError={e => onImgError(e, 'restaurant')} alt="" loading="lazy"
+            <img src={imgSrc('restaurant')} onError={e => onImgError(e, 'restaurant')} alt="warm restaurant interior at night, ambient lighting" loading="lazy"
               className="absolute inset-0 w-full h-full object-cover opacity-70" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#1d1d1f] via-[#1d1d1f]/30 to-transparent" />
             <div className="relative z-10 p-10 h-full flex flex-col justify-between" style={{ minHeight: 580 }}>
@@ -87,7 +87,7 @@ export default function ImageMoments() {
               </p>
               {/* Phone image rising from bottom */}
               <div className="flex-1 flex items-end justify-center mt-8">
-                <img src={imgSrc('reviews')} onError={e => onImgError(e, 'reviews')} alt="" loading="lazy"
+                <img src={imgSrc('reviews')} onError={e => onImgError(e, 'reviews')} alt="restaurant owner viewing 5-star Google reviews on smartphone" loading="lazy"
                   className="h-[320px] w-auto object-contain object-bottom drop-shadow-2xl" />
               </div>
             </div>
@@ -100,7 +100,7 @@ export default function ImageMoments() {
           className="relative rounded-3xl overflow-hidden bg-[#1d1d1f]"
           style={{ minHeight: 480 }}
         >
-          <img src={imgSrc('coffee')} onError={e => onImgError(e, 'coffee')} alt="" loading="lazy"
+          <img src={imgSrc('coffee')} onError={e => onImgError(e, 'coffee')} alt="overhead flat lay of latte art coffee on wooden table" loading="lazy"
             className="absolute inset-0 w-full h-full object-cover opacity-25" />
           <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at 80% 50%, rgba(94,92,230,0.18) 0%, transparent 60%)' }} />
 
@@ -161,7 +161,7 @@ export default function ImageMoments() {
             <div className="flex-1 flex items-center justify-center md:justify-end">
               <img
                 src="/images/phone-case.jpg"
-                alt=""
+                alt="calma AI review management app displayed on a smartphone"
                 loading="lazy"
                 className="h-[340px] md:h-[420px] w-auto object-cover object-top drop-shadow-2xl"
                 style={{ clipPath: 'inset(0 0 28% 0 round 16px)' }}

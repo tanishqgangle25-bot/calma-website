@@ -8,6 +8,7 @@ const links = [
   { label: 'how it works', to: '/how-it-works' },
   { label: 'pricing', to: '/pricing' },
   { label: 'reviews', to: '/testimonials' },
+  { label: 'faq', to: '/faq' },
   { label: 'ecosystem', to: '/ecosystem' },
   { label: 'contact', to: '/contact' },
 ]

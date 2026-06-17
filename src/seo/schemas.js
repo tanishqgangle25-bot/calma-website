@@ -69,7 +69,7 @@ export const localBusinessSchema = {
   url: 'https://heycalma.in',
   description: 'calma automates Google review replies for restaurants across India. AI-powered reputation management based in Indore, Madhya Pradesh.',
   email: 'officialnightera@gmail.com',
-  image: 'https://heycalma.in/og-image.png',
+  image: 'https://heycalma.in/images/restaurant.jpg',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Indore',

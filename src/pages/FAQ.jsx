@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { Plus, Minus } from 'lucide-react'
 import SEOHead from '../components/SEOHead.jsx'
 import { faqSchema } from '../seo/schemas.js'
@@ -75,22 +75,16 @@ function Item({ q, a, i }) {
           {open ? <Minus className="w-5 h-5" /> : <Plus className="w-5 h-5" />}
         </span>
       </button>
-      <AnimatePresence initial={false}>
-        {open && (
-          <motion.div
-            key="answer"
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.35, ease: 'easeOut' }}
-            className="overflow-hidden"
-          >
-            <p className="pb-6 text-base leading-relaxed max-w-2xl" style={{ color: '#4D4828' }}>
-              {a}
-            </p>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <motion.div
+        animate={{ height: open ? 'auto' : 0, opacity: open ? 1 : 0 }}
+        initial={false}
+        transition={{ duration: 0.35, ease: 'easeOut' }}
+        className="overflow-hidden"
+      >
+        <p className="pb-6 text-base leading-relaxed max-w-2xl" style={{ color: '#4D4828' }}>
+          {a}
+        </p>
+      </motion.div>
     </motion.div>
   )
 }

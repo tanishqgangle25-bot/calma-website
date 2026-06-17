@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async'
 
 const SITE_NAME = 'calma'
 const BASE_URL = 'https://heycalma.in'
-const DEFAULT_OG_IMAGE = `${BASE_URL}/og-image.png`
+const DEFAULT_OG_IMAGE = `${BASE_URL}/images/restaurant.jpg`
 
 export default function SEOHead({
   title,

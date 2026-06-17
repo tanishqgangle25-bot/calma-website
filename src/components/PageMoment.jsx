@@ -27,8 +27,8 @@ export default function PageMoment({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-60px' }}
       transition={{ duration: 0.85, ease: [0.25, 0.46, 0.45, 0.94] }}
-      className="relative mx-4 md:mx-6 mb-4 rounded-3xl overflow-hidden"
-      style={{ background: bg, minHeight: 480 }}
+      className="relative mx-3 md:mx-6 mb-4 rounded-2xl md:rounded-3xl overflow-hidden"
+      style={{ background: bg }}
     >
       {/* Glow orb */}
       {glow && (
@@ -47,8 +47,8 @@ export default function PageMoment({
       )}
 
       <div
-        className={`relative z-10 flex flex-col ${isRight ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-8 p-10 md:p-16`}
-        style={{ minHeight: 480 }}
+        className={`relative z-10 flex flex-col ${isRight ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-6 p-6 md:p-16`}
+        style={{ minHeight: 'auto' }}
       >
         {/* Text */}
         <div className="flex-1 max-w-lg">
@@ -85,8 +85,8 @@ export default function PageMoment({
               onError={handleError}
               alt=""
               loading="lazy"
-              className={`w-full max-w-sm rounded-2xl object-cover drop-shadow-2xl ${imageClass}`}
-              style={{ maxHeight: 380 }}
+              className={`w-full max-w-[260px] md:max-w-sm rounded-2xl object-cover drop-shadow-2xl ${imageClass}`}
+              style={{ maxHeight: 300 }}
             />
           </div>
         )}

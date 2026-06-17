@@ -31,25 +31,25 @@ export default function Hero() {
 
       <Spotlight className="-top-20 left-0 md:left-1/2 md:-top-10" fill="#1d1d1f" />
 
-      <div className="relative max-w-7xl mx-auto px-6 md:px-10 min-h-screen flex flex-col md:flex-row items-center pt-20 md:pt-12">
+      <div className="relative max-w-7xl mx-auto px-6 md:px-10 flex flex-col md:flex-row md:items-center md:min-h-screen pt-24 pb-6 md:pt-12 md:pb-0">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
-          className="flex-1 max-w-xl z-10"
+          className="w-full md:flex-1 max-w-xl z-10 text-center md:text-left"
         >
-          <p className="text-sm text-muted mb-8 tracking-wide">
+          <p className="text-sm text-muted mb-6 tracking-wide">
             calma — your reviews. on autopilot.
           </p>
-          <h1 className="text-5xl md:text-7xl font-semibold tracking-tight leading-[1.05]">
+          <h1 className="text-4xl md:text-7xl font-semibold tracking-tight leading-[1.05]">
             your reputation.
             <br />
             automated.
           </h1>
-          <p className="mt-8 text-lg md:text-xl text-muted max-w-md leading-relaxed">
+          <p className="mt-6 text-base md:text-xl text-muted max-w-md leading-relaxed mx-auto md:mx-0">
             calma manages your Google reviews 24/7 — so you don't have to.
           </p>
-          <div className="inline-block mt-10 relative">
+          <div className="inline-block mt-8 relative">
             <Link to="/pricing">
               <LiquidButton size="xl">get started</LiquidButton>
             </Link>
@@ -72,7 +72,7 @@ export default function Hero() {
         </motion.div>
 
         {/* Robot + butterfly seated on head */}
-        <div className="flex-1 relative w-full h-[500px] md:h-[640px] flex items-center justify-center">
+        <div className="w-full md:flex-1 relative h-[260px] md:h-[640px] flex items-center justify-center mt-4 md:mt-0">
 
           {/* Robot with gentle bob */}
           <div className="absolute inset-0 hero-robot-wrap">

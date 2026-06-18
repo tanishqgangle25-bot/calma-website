@@ -9,6 +9,7 @@ export const organizationSchema = {
   logo: 'https://heycalma.in/images/cute-1.png',
   description: 'calma is an AI-powered reputation management platform for restaurants in India that automates Google review responses 24/7.',
   email: 'officialnightera@gmail.com',
+  telephone: '+918251000525',
   parentOrganization: {
     '@type': 'Organization',
     name: 'thenightera',
@@ -26,6 +27,7 @@ export const organizationSchema = {
   },
   sameAs: [
     'https://www.instagram.com/heycalma',
+    'https://www.instagram.com/thenightera',
     'https://www.thenightera.in',
   ],
 }
@@ -69,6 +71,7 @@ export const localBusinessSchema = {
   url: 'https://heycalma.in',
   description: 'calma automates Google review replies for restaurants across India. AI-powered reputation management based in Indore, Madhya Pradesh.',
   email: 'officialnightera@gmail.com',
+  telephone: '+918251000525',
   image: 'https://heycalma.in/images/restaurant.jpg',
   address: {
     '@type': 'PostalAddress',
@@ -317,5 +320,50 @@ export const homePageSchema = {
     localBusinessSchema,
     faqSchema,
     speakableSchema,
+  ],
+}
+
+export function breadcrumbSchema(items) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://heycalma.in/' },
+      ...items.map((it, i) => ({
+        '@type': 'ListItem',
+        position: i + 2,
+        name: it.name,
+        item: it.url,
+      })),
+    ],
+  }
+}
+
+export const aggregateRatingSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: 'calma — AI Review Management',
+  description: 'AI-powered Google review management and reputation automation for Indian restaurants.',
+  brand: { '@type': 'Brand', name: 'calma' },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '200',
+    bestRating: '5',
+    worstRating: '1',
+  },
+  review: [
+    {
+      '@type': 'Review',
+      reviewRating: { '@type': 'Rating', ratingValue: '5' },
+      author: { '@type': 'Person', name: 'Rohan Verma' },
+      reviewBody: 'Our rating moved from 3.9 to 4.4 in about two months. The owner kept asking if we hired someone new.',
+    },
+    {
+      '@type': 'Review',
+      reviewRating: { '@type': 'Rating', ratingValue: '5' },
+      author: { '@type': 'Person', name: 'Priya Agrawal' },
+      reviewBody: 'Now it\'s one screen, one report, done in 4 minutes.',
+    },
   ],
 }

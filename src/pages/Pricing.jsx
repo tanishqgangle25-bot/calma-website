@@ -4,7 +4,7 @@ import { Check, X, Sparkles, ShieldCheck, RefreshCcw, Lock } from 'lucide-react'
 import PageMoment from '../components/PageMoment.jsx'
 import StickyNoteCard from '../components/StickyNoteCard.jsx'
 import SEOHead from '../components/SEOHead.jsx'
-import { organizationSchema } from '../seo/schemas.js'
+import { organizationSchema, breadcrumbSchema } from '../seo/schemas.js'
 
 const tiers = [
   {
@@ -117,7 +117,7 @@ export default function Pricing() {
       title="Pricing — Restaurant Review Management Plans"
       description="calma starts at ₹5,999/month. Google review management, auto-replies, competitor tracking, and a 60-day rating guarantee for restaurants in India."
       path="/pricing"
-      schema={organizationSchema}
+      schema={[organizationSchema, breadcrumbSchema([{ name: 'Pricing', url: 'https://heycalma.in/pricing' }])]}
     />
     <section className="bg-white pt-32 pb-32 md:pt-40 md:pb-40 min-h-screen">
       <div className="max-w-6xl mx-auto px-6 md:px-10">

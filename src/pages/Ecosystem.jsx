@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion'
 import SEOHead from '../components/SEOHead.jsx'
-import { softwareSchema } from '../seo/schemas.js'
+import { softwareSchema, breadcrumbSchema } from '../seo/schemas.js'
 
 const pillars = [
   {
@@ -68,7 +68,7 @@ export default function Ecosystem() {
         title="The calma Ecosystem — Full-Stack Reputation System"
         description="calma is more than review replies. Brand identity, content, AI automation, and Google reputation — one ecosystem built for restaurants in India."
         path="/ecosystem"
-        schema={softwareSchema}
+        schema={[softwareSchema, breadcrumbSchema([{ name: 'Ecosystem', url: 'https://heycalma.in/ecosystem' }])]}
       />
       {/* Wing flap keyframe */}
       <style>{`

@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import SEOHead from '../components/SEOHead.jsx'
-import { aboutPageSchema } from '../seo/schemas.js'
+import { aboutPageSchema, breadcrumbSchema } from '../seo/schemas.js'
 
 const fade = (delay = 0) => ({
   initial: { opacity: 0, y: 24 },
@@ -16,7 +16,7 @@ export default function About() {
         title="About — calma and thenightera"
         description="calma is built by thenightera, a brand intelligence company from Indore, India. Learn about the mission, the founder, and why we built AI review management for Indian restaurants."
         path="/about"
-        schema={aboutPageSchema}
+        schema={[aboutPageSchema, breadcrumbSchema([{ name: 'About', url: 'https://heycalma.in/about' }])]}
       />
 
       <div className="bg-white min-h-screen pt-32 pb-32 md:pt-40 md:pb-40">

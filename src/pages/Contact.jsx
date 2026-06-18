@@ -3,7 +3,7 @@ import { Mail, Globe, MessageCircle } from 'lucide-react'
 import PageMoment from '../components/PageMoment.jsx'
 import StickyNoteCard from '../components/StickyNoteCard.jsx'
 import SEOHead from '../components/SEOHead.jsx'
-import { localBusinessSchema } from '../seo/schemas.js'
+import { localBusinessSchema, breadcrumbSchema } from '../seo/schemas.js'
 
 const EMAIL = 'officialnightera@gmail.com'
 const WA_NUMBER = '918251000525'
@@ -40,7 +40,7 @@ export default function Contact() {
       title="Contact — Talk to the calma Team"
       description="Reach calma by email or WhatsApp. Based in Indore, MP. We reply within 2 hours. Ask about Google review management for your restaurant or hotel."
       path="/contact"
-      schema={localBusinessSchema}
+      schema={[localBusinessSchema, breadcrumbSchema([{ name: 'Contact', url: 'https://heycalma.in/contact' }])]}
     />
     <section className="bg-white pt-32 pb-32 md:pt-40 md:pb-40 min-h-screen">
       <div className="max-w-4xl mx-auto px-6 md:px-10">

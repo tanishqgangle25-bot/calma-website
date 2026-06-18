@@ -3,7 +3,7 @@ import { Quote, Star } from 'lucide-react'
 import PageMoment from '../components/PageMoment.jsx'
 import StickyNoteCard from '../components/StickyNoteCard.jsx'
 import SEOHead from '../components/SEOHead.jsx'
-import { localBusinessSchema } from '../seo/schemas.js'
+import { aggregateRatingSchema, breadcrumbSchema } from '../seo/schemas.js'
 
 const featured = {
   body: "Honestly we used to check Zomato maybe once a week. By Sunday night there'd be 12 reviews and we'd reply to two of them. Calma started replying within an hour, in our voice, and the angry ones it would flag for us first. Our rating moved from 3.9 to 4.4 in about two months. The owner kept asking if we hired someone new.",
@@ -79,7 +79,7 @@ export default function Testimonials() {
       title="Reviews — What Restaurant Owners Say About calma"
       description="200+ restaurants and cafes in Indore trust calma. Real results: ratings improved from 3.8 to 4.6 in 60 days. Read what local owners say."
       path="/testimonials"
-      schema={localBusinessSchema}
+      schema={[aggregateRatingSchema, breadcrumbSchema([{ name: 'Reviews', url: 'https://heycalma.in/testimonials' }])]}
     />
     <section className="bg-white pt-32 pb-32 md:pt-40 md:pb-40 min-h-screen">
       <div className="max-w-6xl mx-auto px-6 md:px-10">

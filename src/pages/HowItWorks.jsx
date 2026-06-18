@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import PageMoment from '../components/PageMoment.jsx'
 import StickyNoteCard from '../components/StickyNoteCard.jsx'
 import SEOHead from '../components/SEOHead.jsx'
-import { howToSchema } from '../seo/schemas.js'
+import { howToSchema, breadcrumbSchema } from '../seo/schemas.js'
 
 const steps = [
   { n: '01', title: 'connect your accounts', body: 'link Google, Zomato, Swiggy in 90 seconds. one-click OAuth — no passwords stored.' },
@@ -18,7 +18,7 @@ export default function HowItWorks() {
       title="How It Works — Setup in 10 Minutes"
       description="Connect Google, Zomato, and Swiggy in 90 seconds. calma monitors reviews, drafts replies in your tone, and sends weekly insights. No engineer needed."
       path="/how-it-works"
-      schema={howToSchema}
+      schema={[howToSchema, breadcrumbSchema([{ name: 'How It Works', url: 'https://heycalma.in/how-it-works' }])]}
     />
     <section className="bg-white pt-32 pb-32 md:pt-40 md:pb-40 min-h-screen">
       <div className="max-w-5xl mx-auto px-6 md:px-10">

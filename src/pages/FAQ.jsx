@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Plus, Minus } from 'lucide-react'
 import SEOHead from '../components/SEOHead.jsx'
-import { faqSchema } from '../seo/schemas.js'
+import { faqSchema, breadcrumbSchema } from '../seo/schemas.js'
 
 const faqs = [
   {
@@ -96,7 +96,7 @@ export default function FAQ() {
         title="FAQ — Common Questions About calma"
         description="Answers to the most common questions about calma: how it works, pricing, platforms supported, and whether it works for your restaurant in India."
         path="/faq"
-        schema={faqSchema}
+        schema={[faqSchema, breadcrumbSchema([{ name: 'FAQ', url: 'https://heycalma.in/faq' }])]}
       />
       <section className="bg-white pt-32 pb-32 md:pt-40 md:pb-40 min-h-screen">
         <div className="max-w-3xl mx-auto px-6 md:px-10">

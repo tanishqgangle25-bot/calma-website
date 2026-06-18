@@ -3,7 +3,7 @@ import { Search, MessageCircle, Smile, TrendingUp, Send, Star, MapPin } from 'lu
 import PageMoment from '../components/PageMoment.jsx'
 import StickyNoteCard from '../components/StickyNoteCard.jsx'
 import SEOHead from '../components/SEOHead.jsx'
-import { featureFaqSchema } from '../seo/schemas.js'
+import { featureFaqSchema, breadcrumbSchema } from '../seo/schemas.js'
 
 const features = [
   { icon: Search, title: 'review monitoring', body: 'calma watches every Google, Zomato and Swiggy review the moment it lands. nothing slips through.' },
@@ -31,7 +31,7 @@ export default function Features() {
       title="Features — AI Review Management for Restaurants"
       description="calma monitors Google, Zomato, and Swiggy reviews 24/7, replies in your voice, tracks sentiment, and helps restaurants in India improve ratings in 60 days."
       path="/features"
-      schema={featureFaqSchema}
+      schema={[featureFaqSchema, breadcrumbSchema([{ name: 'Features', url: 'https://heycalma.in/features' }])]}
     />
     <section className="bg-white pt-32 pb-32 md:pt-40 md:pb-40 min-h-screen">
       <div className="max-w-6xl mx-auto px-6 md:px-10">

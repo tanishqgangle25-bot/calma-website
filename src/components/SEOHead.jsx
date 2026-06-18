@@ -49,11 +49,11 @@ export default function SEOHead({
       <meta name="twitter:image" content={ogImage} />
 
       {/* Schema */}
-      {schema && (
-        <script type="application/ld+json">
-          {JSON.stringify(schema)}
+      {schema && (Array.isArray(schema) ? schema : [schema]).map((s, i) => (
+        <script key={i} type="application/ld+json">
+          {JSON.stringify(s)}
         </script>
-      )}
+      ))}
     </Helmet>
   )
 }

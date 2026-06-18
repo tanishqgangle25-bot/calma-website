@@ -84,6 +84,35 @@ export default function HowItWorks() {
         </div>
       </div>
 
+      <div className="max-w-3xl mx-auto px-6 md:px-10 pb-24">
+        <h2 className="text-2xl font-semibold tracking-tight mb-10" style={{ color: '#4D4828' }}>
+          Common questions about how calma works
+        </h2>
+        {[
+          {
+            q: 'How long does it take to set up calma?',
+            a: 'Setup takes under 10 minutes. You connect your Google Business Profile, Zomato, and Swiggy accounts using one-click OAuth — no passwords stored, no engineers needed. The calma team onboards you over WhatsApp.',
+          },
+          {
+            q: 'How does calma reply to reviews automatically?',
+            a: 'calma connects to your Google Business Profile via the official API. When a new review arrives, calma scores the sentiment, drafts a personalised reply in your brand tone, and either posts it automatically or sends it to you for approval — depending on your plan setting.',
+          },
+          {
+            q: 'How quickly does calma reply to a new review?',
+            a: 'calma detects new reviews within minutes and drafts a reply instantly. The average reply time across calma clients is 7 minutes — far faster than any manual process.',
+          },
+          {
+            q: 'What happens if calma gets a review it cannot handle?',
+            a: 'For complex or sensitive reviews, calma flags them for your attention instead of posting automatically. You get a WhatsApp notification with the review text and a suggested reply to approve or edit.',
+          },
+        ].map(({ q, a }) => (
+          <div key={q} className="mb-8 pb-8 border-b border-[#D4C4AD] last:border-0 last:mb-0 last:pb-0">
+            <h3 className="text-lg font-semibold mb-2" style={{ color: '#372713' }}>{q}</h3>
+            <p className="text-base leading-relaxed" style={{ color: '#4D4828' }}>{a}</p>
+          </div>
+        ))}
+      </div>
+
       <PageMoment
         bg="#D9C4B1"
         glow="#A39670"

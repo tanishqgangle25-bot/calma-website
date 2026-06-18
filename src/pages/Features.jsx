@@ -98,6 +98,35 @@ export default function Features() {
         </motion.div>
       </div>
 
+      <div className="max-w-3xl mx-auto px-6 md:px-10 pb-24">
+        <h2 className="text-2xl font-semibold tracking-tight mb-10" style={{ color: '#372713' }}>
+          Common questions about calma features
+        </h2>
+        {[
+          {
+            q: 'Does calma reply to Zomato and Swiggy reviews?',
+            a: 'Yes. calma monitors and replies to reviews across Google, Zomato, and Swiggy from a single dashboard. All three platforms are included in every plan.',
+          },
+          {
+            q: 'How does calma auto-reply in my brand voice?',
+            a: 'During onboarding, calma studies your existing replies and tone. Within the first week it learns your style — formal, warm, casual — and drafts every reply to match. You can approve manually or let calma post automatically.',
+          },
+          {
+            q: 'Can calma track competitor restaurant reviews?',
+            a: 'Yes. calma Plus and Pro plans include competitor tracking. You can monitor ratings and review trends for nearby restaurants to understand how you compare.',
+          },
+          {
+            q: 'Does calma work for multiple restaurant locations?',
+            a: 'Yes. calma supports multi-location management from a single dashboard. You can view and compare performance across all branches side by side.',
+          },
+        ].map(({ q, a }) => (
+          <div key={q} className="mb-8 pb-8 border-b border-[#E5DDD0] last:border-0 last:mb-0 last:pb-0">
+            <h3 className="text-lg font-semibold mb-2" style={{ color: '#372713' }}>{q}</h3>
+            <p className="text-base leading-relaxed" style={{ color: '#4D4828' }}>{a}</p>
+          </div>
+        ))}
+      </div>
+
       <PageMoment
         bg="#ECE6D8"
         glow="#A39670"

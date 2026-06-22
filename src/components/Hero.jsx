@@ -39,7 +39,7 @@ export default function Hero() {
           className="w-full md:flex-1 max-w-xl z-10 text-center md:text-left"
         >
           <p className="text-sm text-muted mb-6 tracking-wide">
-            calma — your reviews. on autopilot.
+            <strong className="text-[#372713]">calma</strong> — your reviews. on autopilot.
           </p>
           <h1 className="text-4xl md:text-7xl font-semibold tracking-tight leading-[1.05]">
             your reputation.

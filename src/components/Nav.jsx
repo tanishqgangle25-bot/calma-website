@@ -25,7 +25,7 @@ export default function Nav() {
         <div className="max-w-6xl mx-auto px-6 md:px-10 h-12 flex items-center justify-between">
           <Link
             to="/"
-            className="text-sm font-semibold tracking-tight"
+            className="text-sm font-bold tracking-tight"
             style={{ color: '#372713' }}
             onClick={() => setOpen(false)}
           >

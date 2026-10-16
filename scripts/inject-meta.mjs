@@ -63,6 +63,11 @@ const pages = [
     title: 'Terms & Conditions — CALMA | thenightera',
     description: 'Terms for CALMA and thenightera services, including client responsibilities, payment, intellectual property, AI features, and service scope.',
   },
+  {
+    route: 'cookies',
+    title: 'Cookie Policy — CALMA | thenightera',
+    description: 'Learn how CALMA and thenightera use cookies and similar technologies, what they support, and how to manage them.',
+  },
 ]
 
 const OG_IMAGE = 'https://heycalma.in/images/restaurant.jpg'

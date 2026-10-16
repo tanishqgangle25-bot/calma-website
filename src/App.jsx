@@ -13,6 +13,7 @@ import FAQ from './pages/FAQ.jsx'
 import About from './pages/About.jsx'
 import Privacy from './pages/Privacy.jsx'
 import Terms from './pages/Terms.jsx'
+import CookiePolicy from './pages/CookiePolicy.jsx'
 
 export default function App() {
   return (
@@ -31,6 +32,7 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/terms" element={<Terms />} />
+        <Route path="/cookies" element={<CookiePolicy />} />
       </Routes>
       <Footer />
     </main>

@@ -50,7 +50,7 @@ export default function Privacy() {
           <Section id="children" title="Children’s privacy"><p>CALMA is intended for businesses and adults, not children. We do not knowingly collect personal information from anyone below the applicable age of digital consent. Contact us if you believe a child has provided personal information.</p></Section>
           <Section id="changes" title="Policy updates"><p>We may update this policy as our service or legal obligations change. The effective date at the top identifies the current version. Where required, we will provide additional notice of material changes.</p></Section>
           <Section id="contact" title="Contact and privacy requests"><p>For privacy questions, requests, or complaints, contact:</p><address className="not-italic leading-7"><strong className="font-semibold text-[#372713]">CALMA Privacy · thenightera</strong><br />Indore, Madhya Pradesh, India<br /><a className="text-[#7D2027] underline" href="mailto:hello@thenightera.tech">hello@thenightera.tech</a><br /><a className="text-[#7D2027] underline" href="https://heycalma.in/contact">Contact CALMA</a></address><p>This policy is governed by the laws of India, without limiting rights that apply to you under mandatory local law.</p></Section>
-          <p className="border-t border-[#372713]/10 pt-6 text-sm text-[#4D4828]/60">© 2026 calma · a thenightera product</p>
+          <p className="border-t border-[#372713]/10 pt-6 text-sm text-[#4D4828]/60">© 2026 calma · a thenightera product · <a className="text-[#7D2027]" href="/cookies">Cookie Policy</a></p>
         </article>
       </div>
     </main>

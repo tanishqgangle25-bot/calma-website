@@ -24,6 +24,7 @@ export default function Footer() {
             <Link to="/about" className="hover:opacity-60 transition-opacity">about</Link>
             <Link to="/ecosystem" className="hover:opacity-60 transition-opacity">ecosystem</Link>
             <Link to="/contact" className="hover:opacity-60 transition-opacity">contact</Link>
+            <Link to="/privacy" className="hover:opacity-60 transition-opacity">privacy</Link>
           </div>
 
           {/* Social + contact */}
@@ -69,3 +70,4 @@ export default function Footer() {
     </footer>
   )
 }
+

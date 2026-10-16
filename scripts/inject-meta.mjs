@@ -53,6 +53,11 @@ const pages = [
     title: 'About calma — Built in Indore for Indian Restaurants | calma',
     description: 'calma is built by thenightera, a brand intelligence company from Indore, India. Learn about the mission, the founder, and why we built AI review management for Indian restaurants.',
   },
+  {
+    route: 'privacy',
+    title: 'Privacy Policy — CALMA | thenightera',
+    description: 'Learn what CALMA and thenightera collect, how we use business and personal information, and how to make a privacy request.',
+  },
 ]
 
 const OG_IMAGE = 'https://heycalma.in/images/restaurant.jpg'
@@ -110,3 +115,4 @@ for (const page of pages) {
 }
 
 console.log(`done — ${pages.length} pages prerendered with per-page meta`)
+

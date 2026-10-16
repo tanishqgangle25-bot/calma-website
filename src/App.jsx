@@ -11,6 +11,7 @@ import Contact from './pages/Contact.jsx'
 import Ecosystem from './pages/Ecosystem.jsx'
 import FAQ from './pages/FAQ.jsx'
 import About from './pages/About.jsx'
+import Privacy from './pages/Privacy.jsx'
 
 export default function App() {
   return (
@@ -27,8 +28,10 @@ export default function App() {
         <Route path="/ecosystem" element={<Ecosystem />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/about" element={<About />} />
+        <Route path="/privacy" element={<Privacy />} />
       </Routes>
       <Footer />
     </main>
   )
 }
+

@@ -68,6 +68,11 @@ const pages = [
     title: 'Cookie Policy — CALMA | thenightera',
     description: 'Learn how CALMA and thenightera use cookies and similar technologies, what they support, and how to manage them.',
   },
+  {
+    route: 'refunds',
+    title: 'Refund & Cancellation Policy — CALMA | thenightera',
+    description: 'Read CALMA and thenightera refund, cancellation, subscription, renewal, and payment terms.',
+  },
 ]
 
 const OG_IMAGE = 'https://heycalma.in/images/restaurant.jpg'

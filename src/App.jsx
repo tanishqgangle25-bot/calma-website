@@ -14,6 +14,7 @@ import About from './pages/About.jsx'
 import Privacy from './pages/Privacy.jsx'
 import Terms from './pages/Terms.jsx'
 import CookiePolicy from './pages/CookiePolicy.jsx'
+import RefundPolicy from './pages/RefundPolicy.jsx'
 
 export default function App() {
   return (
@@ -33,6 +34,7 @@ export default function App() {
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/cookies" element={<CookiePolicy />} />
+        <Route path="/refunds" element={<RefundPolicy />} />
       </Routes>
       <Footer />
     </main>

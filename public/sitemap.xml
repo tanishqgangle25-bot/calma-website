@@ -82,5 +82,13 @@
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://heycalma.in/privacy"/>
   </url>
 
+  <url>
+    <loc>https://heycalma.in/terms</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://heycalma.in/terms"/>
+  </url>
+
 </urlset>
 

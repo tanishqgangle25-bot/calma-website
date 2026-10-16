@@ -25,6 +25,7 @@ export default function Footer() {
             <Link to="/ecosystem" className="hover:opacity-60 transition-opacity">ecosystem</Link>
             <Link to="/contact" className="hover:opacity-60 transition-opacity">contact</Link>
             <Link to="/privacy" className="hover:opacity-60 transition-opacity">privacy</Link>
+            <Link to="/terms" className="hover:opacity-60 transition-opacity">terms</Link>
           </div>
 
           {/* Social + contact */}

@@ -58,6 +58,11 @@ const pages = [
     title: 'Privacy Policy — CALMA | thenightera',
     description: 'Learn what CALMA and thenightera collect, how we use business and personal information, and how to make a privacy request.',
   },
+  {
+    route: 'terms',
+    title: 'Terms & Conditions — CALMA | thenightera',
+    description: 'Terms for CALMA and thenightera services, including client responsibilities, payment, intellectual property, AI features, and service scope.',
+  },
 ]
 
 const OG_IMAGE = 'https://heycalma.in/images/restaurant.jpg'

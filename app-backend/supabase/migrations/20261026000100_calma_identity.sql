@@ -1,0 +1,23 @@
+-- Calma production identity schema. App uses its own signed-session auth.
+CREATE TABLE IF NOT EXISTS identity_migrations(name TEXT PRIMARY KEY,completed_at TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS google_oauth_requests(state_hash TEXT PRIMARY KEY,code_verifier TEXT NOT NULL,expires_at DOUBLE PRECISION NOT NULL,created_at TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS workspaces(id TEXT PRIMARY KEY,name TEXT NOT NULL,db_path TEXT NOT NULL,created_at TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS users(id TEXT PRIMARY KEY,workspace_id TEXT NOT NULL,email TEXT NOT NULL,password_hash BYTEA NOT NULL,password_salt BYTEA NOT NULL,role TEXT NOT NULL DEFAULT 'owner',created_at TEXT NOT NULL,UNIQUE(workspace_id,email),FOREIGN KEY(workspace_id) REFERENCES workspaces(id));
+CREATE TABLE IF NOT EXISTS sessions(token_hash TEXT PRIMARY KEY,user_id TEXT NOT NULL,expires_at DOUBLE PRECISION NOT NULL,created_at TEXT NOT NULL,FOREIGN KEY(user_id) REFERENCES users(id));
+CREATE TABLE IF NOT EXISTS password_resets(token_hash TEXT PRIMARY KEY,user_id TEXT NOT NULL,expires_at DOUBLE PRECISION NOT NULL,used_at TEXT,created_at TEXT NOT NULL,FOREIGN KEY(user_id) REFERENCES users(id));
+CREATE TABLE IF NOT EXISTS oauth_states(state_hash TEXT PRIMARY KEY,expires_at DOUBLE PRECISION NOT NULL,created_at TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS qr_tokens(token TEXT PRIMARY KEY,workspace_id TEXT NOT NULL,created_at TEXT NOT NULL,FOREIGN KEY(workspace_id) REFERENCES workspaces(id));
+CREATE TABLE IF NOT EXISTS invites(token_hash TEXT PRIMARY KEY,workspace_id TEXT NOT NULL,email TEXT NOT NULL,role TEXT NOT NULL,expires_at DOUBLE PRECISION NOT NULL,created_at TEXT NOT NULL,created_by TEXT NOT NULL,accepted_at TEXT,FOREIGN KEY(workspace_id) REFERENCES workspaces(id));
+CREATE TABLE IF NOT EXISTS auth_attempts(ip_hash TEXT NOT NULL,attempted_at DOUBLE PRECISION NOT NULL);
+CREATE TABLE IF NOT EXISTS webhook_routes(channel TEXT NOT NULL,external_id TEXT NOT NULL,workspace_id TEXT NOT NULL,created_at TEXT NOT NULL,PRIMARY KEY(channel,external_id),FOREIGN KEY(workspace_id) REFERENCES workspaces(id));
+CREATE TABLE IF NOT EXISTS billing_subscriptions(workspace_id TEXT PRIMARY KEY,customer_id TEXT,subscription_id TEXT,status TEXT NOT NULL,price_id TEXT,current_period_end INTEGER,cancel_at_period_end INTEGER NOT NULL DEFAULT 0,updated_at TEXT NOT NULL,last_event_created INTEGER NOT NULL DEFAULT 0,FOREIGN KEY(workspace_id) REFERENCES workspaces(id));
+CREATE TABLE IF NOT EXISTS stripe_events(event_id TEXT PRIMARY KEY,processed_at TEXT NOT NULL);
+CREATE INDEX IF NOT EXISTS sessions_expiry ON sessions(expires_at);
+CREATE INDEX IF NOT EXISTS invites_workspace ON invites(workspace_id,expires_at);
+CREATE INDEX IF NOT EXISTS auth_attempts_window ON auth_attempts(ip_hash,attempted_at);
+CREATE INDEX IF NOT EXISTS webhook_route_workspace ON webhook_routes(workspace_id);
+REVOKE ALL ON SCHEMA public FROM anon, authenticated;
+REVOKE ALL ON ALL TABLES IN SCHEMA public FROM anon, authenticated;
+REVOKE ALL ON ALL SEQUENCES IN SCHEMA public FROM anon, authenticated;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public REVOKE ALL ON TABLES FROM anon, authenticated;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public REVOKE ALL ON SEQUENCES FROM anon, authenticated;

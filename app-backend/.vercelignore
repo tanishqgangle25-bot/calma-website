@@ -1,0 +1,14 @@
+.env
+.env.*
+!.env.example
+.auth-test-data/
+.backup-smoke/
+.playwright-mcp/
+.runtime/
+.runtime-deps/
+.smoke-data/
+data/
+test-data/
+tests/
+__pycache__/
+*.py[cod]

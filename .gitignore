@@ -3,3 +3,19 @@ dist
 .vercel
 *.log
 .DS_Store
+
+# Calma Python application local state and secrets
+app-backend/.env
+app-backend/.env.*
+!app-backend/.env.example
+app-backend/data/
+app-backend/handoff-backup/
+app-backend/__pycache__/
+app-backend/**/*.py[cod]
+app-backend/.runtime/
+app-backend/.runtime-deps/
+app-backend/.auth-test-data/
+app-backend/.backup-smoke/
+app-backend/.playwright-mcp/
+app-backend/.smoke-data/
+app-backend/test-data/

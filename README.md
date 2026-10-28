@@ -4,6 +4,8 @@ your reviews. on autopilot.
 
 Marketing site for calma — smart review management for local businesses in India. Built with React, Vite, Framer Motion, and Tailwind CSS.
 
+The production Python application and API are stored in [`app-backend/`](app-backend/README.md). Its secrets and database files are intentionally excluded from Git.
+
 ## Local development
 
 ```bash

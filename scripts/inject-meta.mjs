@@ -73,6 +73,11 @@ const pages = [
     title: 'Refund & Cancellation Policy — CALMA | thenightera',
     description: 'Read CALMA and thenightera refund, cancellation, subscription, renewal, and payment terms.',
   },
+  {
+    route: 'trial',
+    title: 'calma is live — start your 7-day free trial | calma',
+    description: 'calma is live. Start your 7-day free trial: run a business audit on your Google reviews, see recurring issues and get AI reply drafts you approve.',
+  },
 ]
 
 const OG_IMAGE = 'https://heycalma.in/images/restaurant.jpg'

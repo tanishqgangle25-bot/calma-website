@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { X, Menu } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { APP_LOGIN_URL } from '../lib/appLinks.js'
 
 const links = [
   { label: 'features', to: '/features' },
@@ -33,7 +34,7 @@ export default function Nav() {
           </Link>
 
           {/* Desktop links */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-5 lg:gap-8">
             {links.map((l) => (
               <NavLink
                 key={l.label}
@@ -49,16 +50,41 @@ export default function Nav() {
             ))}
           </div>
 
-          {/* Hamburger */}
-          <button
-            type="button"
-            className="md:hidden flex items-center justify-center w-8 h-8"
-            style={{ color: '#372713' }}
-            onClick={() => setOpen(o => !o)}
-            aria-label="toggle menu"
-          >
-            {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-          </button>
+          {/* Log in + trial (desktop) */}
+          <div className="hidden md:flex items-center gap-3">
+            <a
+              href={APP_LOGIN_URL}
+              className="text-xs font-medium transition-opacity duration-200 hover:opacity-70"
+              style={{ color: '#372713' }}
+            >
+              log in
+            </a>
+            <a
+              href={APP_LOGIN_URL}
+              className="rounded-full bg-ink px-4 py-1.5 text-xs font-semibold text-white transition-colors duration-200 hover:bg-[#333]"
+            >
+              start free trial
+            </a>
+          </div>
+
+          {/* Trial shortcut + hamburger (mobile) */}
+          <div className="md:hidden flex items-center gap-2">
+            <a
+              href={APP_LOGIN_URL}
+              className="rounded-full bg-ink px-3.5 py-1.5 text-xs font-semibold text-white"
+            >
+              start free trial
+            </a>
+            <button
+              type="button"
+              className="flex items-center justify-center w-8 h-8"
+              style={{ color: '#372713' }}
+              onClick={() => setOpen(o => !o)}
+              aria-label="toggle menu"
+            >
+              {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            </button>
+          </div>
         </div>
       </nav>
 
@@ -90,6 +116,13 @@ export default function Nav() {
                   {l.label}
                 </NavLink>
               ))}
+              <a
+                href={APP_LOGIN_URL}
+                className="mt-3 inline-flex items-center justify-center rounded-full border px-5 py-3 text-sm font-semibold"
+                style={{ borderColor: '#372713', color: '#372713' }}
+              >
+                log in
+              </a>
             </div>
           </motion.div>
         )}

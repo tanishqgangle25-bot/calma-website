@@ -106,5 +106,13 @@
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://heycalma.in/refunds"/>
   </url>
 
+  <url>
+    <loc>https://heycalma.in/trial</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://heycalma.in/trial"/>
+  </url>
+
 </urlset>
 

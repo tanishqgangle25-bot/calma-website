@@ -1,4 +1,5 @@
 import Hero from '../components/Hero.jsx'
+import TrialJoin from '../components/TrialJoin.jsx'
 import ImageMoments from '../components/ImageMoments.jsx'
 import TrustStrip from '../components/TrustStrip.jsx'
 import FeatureRail from '../components/FeatureRail.jsx'
@@ -22,6 +23,7 @@ export default function Home() {
         schema={homePageSchema}
       />
       <Hero />
+      <TrialJoin />
       <ImageMoments />
       <TrustStrip />
       <FeatureRail />

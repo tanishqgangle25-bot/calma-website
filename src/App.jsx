@@ -15,6 +15,7 @@ import Privacy from './pages/Privacy.jsx'
 import Terms from './pages/Terms.jsx'
 import CookiePolicy from './pages/CookiePolicy.jsx'
 import RefundPolicy from './pages/RefundPolicy.jsx'
+import Trial from './pages/Trial.jsx'
 
 export default function App() {
   return (
@@ -35,6 +36,7 @@ export default function App() {
         <Route path="/terms" element={<Terms />} />
         <Route path="/cookies" element={<CookiePolicy />} />
         <Route path="/refunds" element={<RefundPolicy />} />
+        <Route path="/trial" element={<Trial />} />
       </Routes>
       <Footer />
     </main>

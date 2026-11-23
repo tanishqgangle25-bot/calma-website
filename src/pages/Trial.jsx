@@ -2,10 +2,10 @@ import { motion } from 'framer-motion'
 import FadeUp from '../components/FadeUp.jsx'
 import SEOHead from '../components/SEOHead.jsx'
 import { breadcrumbSchema } from '../seo/schemas.js'
-import { APP_LOGIN_URL, TRIAL_DAYS } from '../lib/appLinks.js'
+import { APP_LOGIN_URL, APP_SIGNUP_URL, TRIAL_DAYS } from '../lib/appLinks.js'
 
 const steps = [
-  { n: '1', title: 'Sign in', text: 'Continue with Google or an email link. Your workspace is ready in seconds.' },
+  { n: '1', title: 'Sign in', text: 'Continue with Google. Your workspace is ready in seconds.' },
   { n: '2', title: 'Add your business', text: 'Paste your Google Maps link so calma can find your reviews.' },
   { n: '3', title: 'Run the Business Audit', text: 'One click. calma reads your recent reviews and prepares your report.' },
 ]
@@ -27,7 +27,7 @@ function CtaButtons({ center = false }) {
   return (
     <div className={`flex flex-col sm:flex-row gap-3 ${center ? 'justify-center' : ''}`}>
       <a
-        href={APP_LOGIN_URL}
+        href={APP_SIGNUP_URL}
         className="inline-flex items-center justify-center rounded-full bg-ink px-7 py-3.5 text-sm font-semibold text-white transition-colors duration-200 hover:bg-[#333]"
       >
         Start {TRIAL_DAYS}-day free trial
@@ -97,7 +97,7 @@ export default function Trial() {
           >
             <CtaButtons center />
             <p className="mt-4 text-xs" style={{ color: '#4D4828', opacity: 0.7 }}>
-              Continue with Google or email.
+              Continue with Google.
             </p>
           </motion.div>
         </div>

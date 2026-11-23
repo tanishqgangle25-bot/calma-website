@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import FadeUp from './FadeUp.jsx'
-import { APP_LOGIN_URL, TRIAL_DAYS } from '../lib/appLinks.js'
+import { APP_LOGIN_URL, APP_SIGNUP_URL, TRIAL_DAYS } from '../lib/appLinks.js'
 
 // "calma is live" entry card: log in or start the trial, like the ChatGPT / Claude landing screens.
 export default function TrialJoin() {
@@ -36,7 +36,7 @@ export default function TrialJoin() {
 
             <div className="mt-8 flex flex-col gap-3">
               <a
-                href={APP_LOGIN_URL}
+                href={APP_SIGNUP_URL}
                 className="inline-flex items-center justify-center rounded-full bg-ink px-6 py-3.5 text-sm font-semibold text-white transition-colors duration-200 hover:bg-[#333]"
               >
                 Start {TRIAL_DAYS}-day free trial
@@ -51,7 +51,7 @@ export default function TrialJoin() {
             </div>
 
             <p className="mt-5 text-xs" style={{ color: '#4D4828', opacity: 0.75 }}>
-              Continue with Google or email.{' '}
+              Continue with Google.{' '}
               <Link to="/trial" className="underline underline-offset-2 hover:opacity-70">
                 How the trial works
               </Link>

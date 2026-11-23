@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { X, Menu } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { APP_LOGIN_URL } from '../lib/appLinks.js'
+import { APP_LOGIN_URL, APP_SIGNUP_URL } from '../lib/appLinks.js'
 
 const links = [
   { label: 'features', to: '/features' },
@@ -60,7 +60,7 @@ export default function Nav() {
               Log in
             </a>
             <a
-              href={APP_LOGIN_URL}
+              href={APP_SIGNUP_URL}
               className="rounded-full bg-ink px-4 py-1.5 text-xs font-semibold text-white transition-colors duration-200 hover:bg-[#333]"
             >
               Start free trial
@@ -70,7 +70,7 @@ export default function Nav() {
           {/* Trial shortcut + hamburger (mobile) */}
           <div className="md:hidden flex items-center gap-2">
             <a
-              href={APP_LOGIN_URL}
+              href={APP_SIGNUP_URL}
               className="rounded-full bg-ink px-3.5 py-1.5 text-xs font-semibold text-white"
             >
               Start free trial

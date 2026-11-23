@@ -20,7 +20,7 @@ export default function TrialJoin() {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full opacity-60" style={{ background: '#7D2027' }} />
                 <span className="relative inline-flex h-2 w-2 rounded-full" style={{ background: '#7D2027' }} />
               </span>
-              live now
+              Live now
             </span>
 
             <h2
@@ -31,7 +31,7 @@ export default function TrialJoin() {
               calma is live.
             </h2>
             <p className="mt-3 text-base" style={{ color: '#4D4828' }}>
-              join the {TRIAL_DAYS}-day free trial and see your reviews on autopilot.
+              Join the {TRIAL_DAYS}-day free trial and see your reviews on autopilot.
             </p>
 
             <div className="mt-8 flex flex-col gap-3">
@@ -39,21 +39,21 @@ export default function TrialJoin() {
                 href={APP_LOGIN_URL}
                 className="inline-flex items-center justify-center rounded-full bg-ink px-6 py-3.5 text-sm font-semibold text-white transition-colors duration-200 hover:bg-[#333]"
               >
-                start {TRIAL_DAYS}-day free trial
+                Start {TRIAL_DAYS}-day free trial
               </a>
               <a
                 href={APP_LOGIN_URL}
                 className="inline-flex items-center justify-center rounded-full border px-6 py-3.5 text-sm font-semibold transition-colors duration-200 hover:bg-white"
                 style={{ borderColor: '#372713', color: '#372713' }}
               >
-                log in
+                Log in
               </a>
             </div>
 
             <p className="mt-5 text-xs" style={{ color: '#4D4828', opacity: 0.75 }}>
-              continue with google or email.{' '}
+              Continue with Google or email.{' '}
               <Link to="/trial" className="underline underline-offset-2 hover:opacity-70">
-                how the trial works
+                How the trial works
               </Link>
             </p>
           </div>

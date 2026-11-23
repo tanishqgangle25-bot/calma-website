@@ -57,13 +57,13 @@ export default function Nav() {
               className="text-xs font-medium transition-opacity duration-200 hover:opacity-70"
               style={{ color: '#372713' }}
             >
-              log in
+              Log in
             </a>
             <a
               href={APP_LOGIN_URL}
               className="rounded-full bg-ink px-4 py-1.5 text-xs font-semibold text-white transition-colors duration-200 hover:bg-[#333]"
             >
-              start free trial
+              Start free trial
             </a>
           </div>
 
@@ -73,7 +73,7 @@ export default function Nav() {
               href={APP_LOGIN_URL}
               className="rounded-full bg-ink px-3.5 py-1.5 text-xs font-semibold text-white"
             >
-              start free trial
+              Start free trial
             </a>
             <button
               type="button"
@@ -121,7 +121,7 @@ export default function Nav() {
                 className="mt-3 inline-flex items-center justify-center rounded-full border px-5 py-3 text-sm font-semibold"
                 style={{ borderColor: '#372713', color: '#372713' }}
               >
-                log in
+                Log in
               </a>
             </div>
           </motion.div>

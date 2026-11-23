@@ -5,22 +5,22 @@ import { breadcrumbSchema } from '../seo/schemas.js'
 import { APP_LOGIN_URL, TRIAL_DAYS } from '../lib/appLinks.js'
 
 const steps = [
-  { n: '1', title: 'sign in', text: 'continue with google or an email link. your workspace is ready in seconds.' },
-  { n: '2', title: 'add your business', text: 'paste your google maps link so calma can find your reviews.' },
-  { n: '3', title: 'run the business audit', text: 'one click. calma reads your recent reviews and prepares your report.' },
+  { n: '1', title: 'Sign in', text: 'Continue with Google or an email link. Your workspace is ready in seconds.' },
+  { n: '2', title: 'Add your business', text: 'Paste your Google Maps link so calma can find your reviews.' },
+  { n: '3', title: 'Run the Business Audit', text: 'One click. calma reads your recent reviews and prepares your report.' },
 ]
 
 const journey = [
-  { day: 'day 1', text: 'run your audit. calma syncs up to 50 of your latest reviews.' },
-  { day: 'day 6', text: 'up to 50 new reviews are synced, and you get your one final report.' },
-  { day: 'day 7', text: 'the trial ends. your saved reviews and report stay available.' },
+  { day: 'Day 1', text: 'Run your audit. calma syncs up to 50 of your latest reviews.' },
+  { day: 'Day 6', text: 'Up to 50 new reviews are synced, and you get your one final report.' },
+  { day: 'Day 7', text: 'The trial ends. Your saved reviews and report stay available.' },
 ]
 
 const gets = [
-  { title: 'business audit', text: 'your rating, recent reviews and what needs attention, in one place.' },
-  { title: 'recurring issues', text: 'the problems customers keep mentioning, with a clear way to fix each one.' },
-  { title: 'reply drafts', text: 'ai-written replies for your reviews. nothing is published without your approval.' },
-  { title: 'plain-language summary', text: 'a short business snapshot in english or hinglish.' },
+  { title: 'Business Audit', text: 'Your rating, recent reviews and what needs attention, in one place.' },
+  { title: 'Recurring issues', text: 'The problems customers keep mentioning, with a clear way to fix each one.' },
+  { title: 'Reply drafts', text: 'AI-written replies for your reviews. Nothing is published without your approval.' },
+  { title: 'Plain-language summary', text: 'A short business snapshot in English or Hinglish.' },
 ]
 
 function CtaButtons({ center = false }) {
@@ -30,14 +30,14 @@ function CtaButtons({ center = false }) {
         href={APP_LOGIN_URL}
         className="inline-flex items-center justify-center rounded-full bg-ink px-7 py-3.5 text-sm font-semibold text-white transition-colors duration-200 hover:bg-[#333]"
       >
-        start {TRIAL_DAYS}-day free trial
+        Start {TRIAL_DAYS}-day free trial
       </a>
       <a
         href={APP_LOGIN_URL}
         className="inline-flex items-center justify-center rounded-full border px-7 py-3.5 text-sm font-semibold transition-colors duration-200 hover:bg-[#ECE6D8]"
         style={{ borderColor: '#372713', color: '#372713' }}
       >
-        log in
+        Log in
       </a>
     </div>
   )
@@ -47,7 +47,7 @@ export default function Trial() {
   return (
     <>
       <SEOHead
-        title="calma is live — start your 7-day free trial"
+        title="calma is live — Start your 7-day free trial"
         description="calma is live. Start your 7-day free trial: run a business audit on your Google reviews, see recurring issues and get AI reply drafts you approve."
         path="/trial"
         schema={breadcrumbSchema([{ name: 'Free trial', url: 'https://heycalma.in/trial' }])}
@@ -67,7 +67,7 @@ export default function Trial() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full opacity-60" style={{ background: '#7D2027' }} />
               <span className="relative inline-flex h-2 w-2 rounded-full" style={{ background: '#7D2027' }} />
             </span>
-            live now
+            Live now
           </motion.span>
           <motion.h1
             initial={{ opacity: 0, y: 24 }}
@@ -78,7 +78,7 @@ export default function Trial() {
           >
             calma is live.
             <br />
-            <span style={{ color: '#7D2027' }}>join the free trial.</span>
+            <span style={{ color: '#7D2027' }}>Join the free trial.</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}
@@ -87,7 +87,7 @@ export default function Trial() {
             className="mt-6 text-lg md:text-xl max-w-xl mx-auto"
             style={{ color: '#4D4828', opacity: 0.8 }}
           >
-            {TRIAL_DAYS} days to see what calma does with your google reviews. start in a minute.
+            {TRIAL_DAYS} days to see what calma does with your Google reviews. Start in a minute.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 12 }}
@@ -97,7 +97,7 @@ export default function Trial() {
           >
             <CtaButtons center />
             <p className="mt-4 text-xs" style={{ color: '#4D4828', opacity: 0.7 }}>
-              continue with google or email.
+              Continue with Google or email.
             </p>
           </motion.div>
         </div>
@@ -108,7 +108,7 @@ export default function Trial() {
         <div className="max-w-5xl mx-auto px-6 md:px-10">
           <FadeUp>
             <h2 className="text-3xl md:text-5xl font-semibold tracking-tight text-center" style={{ color: '#372713' }}>
-              three steps. that's it.
+              Three steps. That's it.
             </h2>
           </FadeUp>
           <div className="mt-12 grid gap-5 md:grid-cols-3">
@@ -135,10 +135,10 @@ export default function Trial() {
         <div className="max-w-3xl mx-auto px-6 md:px-10">
           <FadeUp>
             <p className="text-xs font-semibold tracking-[4px] uppercase mb-4 text-center" style={{ color: '#A39670' }}>
-              your {TRIAL_DAYS} days
+              Your {TRIAL_DAYS} days
             </p>
             <h2 className="text-3xl md:text-5xl font-semibold tracking-tight text-center" style={{ color: '#372713' }}>
-              here's what happens.
+              Here's what happens.
             </h2>
           </FadeUp>
           <ol className="mt-12 space-y-0">
@@ -166,7 +166,7 @@ export default function Trial() {
         <div className="max-w-5xl mx-auto px-6 md:px-10">
           <FadeUp>
             <h2 className="text-3xl md:text-5xl font-semibold tracking-tight text-center" style={{ color: '#372713' }}>
-              what you get in the trial.
+              What you get in the trial.
             </h2>
           </FadeUp>
           <div className="mt-12 grid gap-5 sm:grid-cols-2">
@@ -187,10 +187,10 @@ export default function Trial() {
         <div className="max-w-3xl mx-auto px-6 md:px-10 text-center">
           <FadeUp>
             <h2 className="text-3xl md:text-5xl font-semibold tracking-tight" style={{ color: '#372713' }}>
-              ready to try calma?
+              Ready to try calma?
             </h2>
             <p className="mt-4 text-lg" style={{ color: '#4D4828', opacity: 0.8 }}>
-              your {TRIAL_DAYS}-day free trial starts the moment you sign in.
+              Your {TRIAL_DAYS}-day free trial starts the moment you sign in.
             </p>
             <div className="mt-10">
               <CtaButtons center />

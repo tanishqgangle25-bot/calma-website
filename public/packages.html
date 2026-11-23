@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>thenightera — Packages</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --cream: #ECE6D8;
+    --tan: #D9C4B1;
+    --gold: #A39670;
+    --brown: #4D4828;
+    --ink: #372713;
+    --red: #7D2027;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+
+  .hero {
+    padding: 90px 0 60px;
+    text-align: center;
+  }
+  .eyebrow {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--red);
+  }
+  h1 {
+    margin-top: 14px;
+    font-size: clamp(36px, 6vw, 64px);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    color: var(--ink);
+  }
+  h1 span { color: var(--gold); }
+  .sub {
+    margin-top: 18px;
+    font-size: 18px;
+    color: var(--brown);
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding: 20px 0 80px;
+    align-items: start;
+  }
+  @media (max-width: 900px) {
+    .grid { grid-template-columns: 1fr; }
+  }
+
+  .card {
+    position: relative;
+    background: #fff;
+    border-radius: 28px;
+    padding: 40px 32px;
+    box-shadow: 0 2px 20px rgba(55,39,19,0.06);
+  }
+  .card.featured {
+    background: var(--ink);
+    color: var(--cream);
+    box-shadow: 0 12px 40px rgba(55,39,19,0.25);
+    transform: translateY(-10px);
+  }
+  .tag {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--red);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 99px;
+  }
+  .tier-name {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .card.featured .tier-name { color: var(--tan); }
+  .price {
+    margin-top: 16px;
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1;
+  }
+  .price sub {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--brown);
+    margin-left: 6px;
+  }
+  .card.featured .price sub { color: var(--tan); }
+  .every-month {
+    margin-top: 6px;
+    font-size: 13px;
+    color: var(--brown);
+  }
+  .card.featured .every-month { color: var(--tan); }
+  .pitch {
+    margin-top: 18px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--brown);
+    min-height: 42px;
+  }
+  .card.featured .pitch { color: var(--tan); }
+
+  ul.features {
+    margin-top: 24px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  ul.features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--ink);
+  }
+  .card.featured ul.features li { color: var(--cream); }
+  ul.features li svg { flex-shrink: 0; margin-top: 3px; }
+  ul.features li .feat-desc {
+    display: block;
+    margin-top: 2px;
+    font-size: 12.5px;
+    font-weight: 400;
+    color: var(--brown);
+    line-height: 1.45;
+  }
+  .card.featured ul.features li .feat-desc { color: var(--tan); }
+
+  .buy {
+    display: block;
+    width: 100%;
+    margin-top: 28px;
+    padding: 14px 0;
+    text-align: center;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    border: 1.5px solid var(--ink);
+    color: var(--ink);
+    transition: all 0.2s ease;
+  }
+  .buy:hover { background: var(--ink); color: var(--cream); }
+  .card.featured .buy {
+    border-color: var(--cream);
+    color: var(--ink);
+    background: var(--cream);
+  }
+  .card.featured .buy:hover { background: var(--tan); }
+
+  .divider { height: 1px; background: var(--tan); opacity: 0.5; margin: 10px 0; }
+
+  .section-head { text-align: center; padding: 60px 0 10px; }
+  .section-head .eyebrow { color: var(--red); }
+  .section-head h2 {
+    margin-top: 10px; font-size: clamp(28px, 4vw, 42px); font-weight: 600;
+    letter-spacing: -0.01em; color: var(--ink);
+  }
+  .section-head p { margin-top: 12px; font-size: 16px; color: var(--brown); max-width: 540px; margin-left: auto; margin-right: auto; }
+
+  .svc-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 30px 0 70px;
+  }
+  @media (max-width: 900px) { .svc-grid { grid-template-columns: 1fr; } }
+  .svc-card {
+    background: #fff;
+    border-radius: 22px;
+    padding: 28px 26px;
+    box-shadow: 0 2px 16px rgba(55,39,19,0.05);
+  }
+  .svc-tag {
+    display: inline-block;
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--red);
+    background: rgba(125,32,39,0.08);
+    padding: 4px 10px;
+    border-radius: 99px;
+  }
+  .svc-card h3 {
+    margin-top: 14px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+  .svc-price {
+    margin-top: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--gold);
+  }
+  .svc-card p {
+    margin-top: 8px;
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: var(--brown);
+  }
+  .svc-outcome {
+    margin-top: 12px;
+    font-size: 12.5px;
+    font-weight: 500;
+    color: var(--ink);
+    padding-top: 10px;
+    border-top: 1px solid rgba(55,39,19,0.08);
+  }
+  .svc-outcome b { color: var(--red); }
+
+  .moment {
+    margin: 0 0 80px;
+    border-radius: 32px;
+    overflow: hidden;
+    position: relative;
+    background: var(--ink);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 320px;
+  }
+  @media (max-width: 800px) {
+    .moment { grid-template-columns: 1fr; min-height: auto; }
+  }
+  .moment img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    min-height: 280px;
+  }
+  .moment-text {
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .moment-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--red);
+  }
+  .moment-text h2 {
+    margin-top: 12px;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--cream);
+    line-height: 1.15;
+  }
+  .moment-text h2 span { color: var(--tan); }
+  .moment-text p {
+    margin-top: 14px;
+    font-size: 15px;
+    color: var(--tan);
+    line-height: 1.6;
+    max-width: 380px;
+  }
+
+  footer {
+    padding: 40px 0 60px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--brown);
+  }
+  footer a { color: var(--red); text-decoration: none; font-weight: 500; }
+</style>
+</head>
+<body>
+
+  <div class="wrap">
+    <div class="hero">
+      <p class="eyebrow" style="text-transform: lowercase;">thenightera</p>
+      <h1>brand packages.<br /><span>built for impact.</span></h1>
+      <p class="sub">cinematic content and brand identity — pick the level of presence your business needs.</p>
+    </div>
+
+    <div class="grid">
+
+      <div class="card">
+        <p class="tier-name">brand building pack</p>
+        <p class="price">₹22,000<sub>/mo</sub></p>
+        <p class="every-month">billed monthly</p>
+        <p class="pitch">where your content becomes a brand language.</p>
+        <ul class="features">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7D2027" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>6 reels — 2 voice-over, 4 trend-based
+              <span class="feat-desc">no on-camera model needed — scripted VO reels plus reels cut to trending audio and formats, shot in 4k on mobile.</span>
+            </span>
+          </li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7D2027" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>12 posters
+              <span class="feat-desc">visually consistent, aesthetic templates for promos, menus, and offers.</span>
+            </span>
+          </li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7D2027" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>meta ad support
+              <span class="feat-desc">campaign setup on Instagram/Facebook — available with client ad budget.</span>
+            </span>
+          </li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7D2027" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>15-min content direction call
+              <span class="feat-desc">a short call each month to align on creative direction and brand voice.</span>
+            </span>
+          </li>
+        </ul>
+        <p class="every-month" style="margin-top:18px;">perfect for: brands serious about consistency and recognition.</p>
+        <a class="buy" href="https://wa.me/918251000525?text=Hi%2C%20I%27m%20interested%20in%20the%20Brand%20Building%20Pack%20(%E2%82%B922%2C000)" target="_blank" rel="noopener">talk to us</a>
+      </div>
+
+      <div class="card featured">
+        <span class="tag">most chosen</span>
+        <p class="tier-name">premium brand pack</p>
+        <p class="price">₹35,000<sub>/mo</sub></p>
+        <p class="every-month">billed monthly</p>
+        <p class="pitch">for creators, cafés, and fashion houses shaping culture — not chasing trends.</p>
+        <ul class="features">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ECE6D8" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>8 reels — 2 model, 2 voice-over, 2 aesthetic, 1 influencer collab
+              <span class="feat-desc">shot with camera — a mix of on-camera model reels, narrated VO reels, mood-driven aesthetic edits, and one collab with a local influencer.</span>
+            </span>
+          </li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ECE6D8" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>15 posters
+              <span class="feat-desc">bold, refined visuals built for a recognisable brand look.</span>
+            </span>
+          </li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ECE6D8" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>30-min brand strategy call + content calendar
+              <span class="feat-desc">a deeper monthly session to map goals, audience, and a tailored content plan.</span>
+            </span>
+          </li>
+        </ul>
+        <p class="every-month" style="margin-top:18px;">perfect for: brands building a lifestyle, not just a product.</p>
+        <a class="buy" href="https://wa.me/918251000525?text=Hi%2C%20I%27m%20interested%20in%20the%20Premium%20Brand%20Pack%20(%E2%82%B935%2C000)" target="_blank" rel="noopener">talk to us</a>
+      </div>
+
+      <div class="card">
+        <p class="tier-name">elite brand pack</p>
+        <p class="price">₹50,000<sub>/mo</sub></p>
+        <p class="every-month">billed monthly</p>
+        <p class="pitch">this is the statement piece.</p>
+        <ul class="features">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7D2027" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>12 reels — 2 model, 2 influencer collabs, 2 VFX, 3 voice-over, 2 aesthetic, 1 standard edit
+              <span class="feat-desc">our full production stack — model shoots, influencer collabs, visual effects, narrated VO, and editorial-style edits.</span>
+            </span>
+          </li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7D2027" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>20 premium posters & photos
+              <span class="feat-desc">elevated visuals built for premium perception across every touchpoint.</span>
+            </span>
+          </li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7D2027" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>full meta ads + google ads
+              <span class="feat-desc">complete setup and performance optimisation across Meta and Google.</span>
+            </span>
+          </li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7D2027" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>brand tone + content strategy consultation
+              <span class="feat-desc">a dedicated session to define your brand's voice, positioning, and content roadmap.</span>
+            </span>
+          </li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7D2027" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>captions + hashtags for all deliverables
+              <span class="feat-desc">every post launches ready to publish — no extra copywriting needed.</span>
+            </span>
+          </li>
+        </ul>
+        <p class="every-month" style="margin-top:18px;">perfect for: brands going all-in — chasing impact, not just impressions.</p>
+        <a class="buy" href="https://wa.me/918251000525?text=Hi%2C%20I%27m%20interested%20in%20the%20Elite%20Brand%20Pack%20(%E2%82%B950%2C000)" target="_blank" rel="noopener">talk to us</a>
+      </div>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section-head">
+      <p class="eyebrow">calma</p>
+      <h2>AI review management.</h2>
+      <p>calma monitors and replies to your Google, Zomato, and Swiggy reviews 24/7 — built for restaurants and hospitality businesses in India.</p>
+    </div>
+
+    <div class="grid">
+
+      <div class="card">
+        <p class="tier-name">basic</p>
+        <p class="price">₹5,999<sub>/mo</sub></p>
+        <p class="every-month">billed monthly</p>
+        <p class="pitch">for solo locations getting started.</p>
+        <ul class="features">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7D2027" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Google reviews only<span class="feat-desc">daily monitoring, 1 location.</span></span>
+          </li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7D2027" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>manual professional replies<span class="feat-desc">drafted for you, approve before posting.</span></span>
+          </li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7D2027" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>monthly reports<span class="feat-desc">basic analytics on your rating trend.</span></span>
+          </li>
+        </ul>
+        <a class="buy" href="https://wa.me/918251000525?text=Hi%2C%20I%27m%20interested%20in%20calma%20Basic%20(%E2%82%B95%2C999%2Fmo)" target="_blank" rel="noopener">talk to us</a>
+      </div>
+
+      <div class="card featured">
+        <span class="tag">most popular</span>
+        <p class="tier-name">plus</p>
+        <p class="price">₹9,999<sub>/mo</sub></p>
+        <p class="every-month">billed monthly</p>
+        <p class="pitch">for growing brands across 2-3 locations.</p>
+        <ul class="features">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ECE6D8" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Google + Zomato + Swiggy<span class="feat-desc">all 3 platforms monitored daily, 2-3 locations.</span></span>
+          </li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ECE6D8" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>competitor tracking<span class="feat-desc">monitor up to 3 nearby competitors.</span></span>
+          </li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ECE6D8" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>content calendar<span class="feat-desc">4 posts/month + weekly reports.</span></span>
+          </li>
+        </ul>
+        <a class="buy" href="https://wa.me/918251000525?text=Hi%2C%20I%27m%20interested%20in%20calma%20Plus%20(%E2%82%B99%2C999%2Fmo)" target="_blank" rel="noopener">talk to us</a>
+      </div>
+
+      <div class="card">
+        <p class="tier-name">pro</p>
+        <p class="price">₹16,999<sub>/mo</sub></p>
+        <p class="every-month">billed monthly</p>
+        <p class="pitch">for chains who need everything dialled in.</p>
+        <ul class="features">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7D2027" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>all platforms, unlimited locations<span class="feat-desc">real-time monitoring, AI-powered + manual replies.</span></span>
+          </li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7D2027" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>dedicated account manager<span class="feat-desc">weekly strategy calls, phone + WhatsApp support.</span></span>
+          </li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7D2027" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>full API access<span class="feat-desc">unlimited competitor tracking, custom templates.</span></span>
+          </li>
+        </ul>
+        <a class="buy" href="https://wa.me/918251000525?text=Hi%2C%20I%27m%20interested%20in%20calma%20Pro%20(%E2%82%B916%2C999%2Fmo)" target="_blank" rel="noopener">talk to us</a>
+      </div>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section-head">
+      <p class="eyebrow">AI automation</p>
+      <h2>systems that run without you.</h2>
+      <p>n8n-powered AI agents that handle outreach, support, content, and calls — built once, runs every day. pricing scoped to what you need.</p>
+    </div>
+
+    <div class="svc-grid">
+
+      <div class="svc-card">
+        <span class="svc-tag">B2B · agencies · SaaS</span>
+        <h3>AI SDR & appointment engine</h3>
+        <p class="svc-price">starting at ₹30,000 <span style="color: var(--brown); font-weight: 400;">one-time setup</span></p>
+        <p>automates prospect identification, personalised outreach over email and LinkedIn, follow-ups, and meeting scheduling — end to end.</p>
+        <p class="svc-outcome"><b>outcome:</b> 5–10+ qualified meetings a month, no extra headcount.</p>
+      </div>
+
+      <div class="svc-card">
+        <span class="svc-tag">clinics · salons · restaurants</span>
+        <h3>review & reputation automation</h3>
+        <p class="svc-price">starting at ₹18,000 <span style="color: var(--brown); font-weight: 400;">one-time setup</span></p>
+        <p>sends automated review requests after every visit over SMS, WhatsApp, and email. drafts AI replies and alerts you instantly on negative feedback.</p>
+        <p class="svc-outcome"><b>outcome:</b> better ratings and local SEO with almost no manual effort.</p>
+      </div>
+
+      <div class="svc-card">
+        <span class="svc-tag">creators · coaches · e-commerce</span>
+        <h3>AI content & UGC engine</h3>
+        <p class="svc-price">starting at ₹25,000 <span style="color: var(--brown); font-weight: 400;">one-time setup</span></p>
+        <p>turns one long-form video into 20–40 short clips with captions and thumbnails, auto-scheduled across platforms with a built-in lead funnel.</p>
+        <p class="svc-outcome"><b>outcome:</b> 3–5x content output, 30–40% better ROI.</p>
+      </div>
+
+      <div class="svc-card">
+        <span class="svc-tag">clinics · real estate · SaaS</span>
+        <h3>AI support & booking agent</h3>
+        <p class="svc-price">starting at ₹20,000 <span style="color: var(--brown); font-weight: 400;">one-time setup</span></p>
+        <p>a 24/7 chatbot on your website and WhatsApp that answers FAQs, explains your offering, qualifies leads, and books appointments.</p>
+        <p class="svc-outcome"><b>outcome:</b> lower support costs, instant replies, zero missed leads.</p>
+      </div>
+
+      <div class="svc-card">
+        <span class="svc-tag">clinics · salons · B2B teams</span>
+        <h3>AI calling agent</h3>
+        <p class="svc-price">starting at ₹35,000 <span style="color: var(--brown); font-weight: 400;">one-time setup</span></p>
+        <p>answers every incoming call, handles questions, books appointments, and makes outbound follow-up calls to leads sitting in your pipeline.</p>
+        <p class="svc-outcome"><b>outcome:</b> 24/7 call answering, reported 20–30% revenue uplift.</p>
+      </div>
+
+      <div class="svc-card" style="display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; background: var(--ink);">
+        <h3 style="color: var(--cream); margin-top:0;">not sure which one fits?</h3>
+        <p style="color: var(--tan);">tell us what's eating your time — we'll map it to the right system.</p>
+        <a class="buy" style="border-color: var(--cream); color: var(--ink); background: var(--cream); margin-top:14px;" href="https://wa.me/918251000525?text=Hi%2C%20I%27d%20like%20to%20know%20which%20AI%20automation%20fits%20my%20business" target="_blank" rel="noopener">talk to us</a>
+      </div>
+
+    </div>
+
+    <div class="moment">
+      <img src="https://heycalma.in/images/cute-5.jpg" alt="" />
+      <div class="moment-text">
+        <p class="moment-eyebrow">why <span style="text-transform: lowercase;">thenightera</span></p>
+        <h2>brand intelligence.<br /><span>built quietly, felt loudly.</span></h2>
+        <p>we don't chase trends — we build brand language. every frame, font, and sound is designed with intention, so your content doesn't just get views. it gets remembered.</p>
+      </div>
+    </div>
+
+    <footer>
+      questions? <a href="mailto:officialnightera@gmail.com">officialnightera@gmail.com</a> · <a href="https://wa.me/918251000525">whatsapp +91 82510 00525</a>
+    </footer>
+  </div>
+
+</body>
+</html>

@@ -1,5 +1,6 @@
 import Hero from '../components/Hero.jsx'
 import TrialJoin from '../components/TrialJoin.jsx'
+import HowAIWorks from '../components/HowAIWorks.jsx'
 import ImageMoments from '../components/ImageMoments.jsx'
 import TrustStrip from '../components/TrustStrip.jsx'
 import FeatureRail from '../components/FeatureRail.jsx'
@@ -24,6 +25,7 @@ export default function Home() {
       />
       <Hero />
       <TrialJoin />
+      <HowAIWorks />
       <ImageMoments />
       <TrustStrip />
       <FeatureRail />
